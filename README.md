@@ -8,7 +8,7 @@
 |------|------|---------|
 | [`esp32/`](esp32/README.md) | **ESP32-S3 车载终端固件** — 双通道 CAN 采集、GPS、SD 卡日志、低功耗电源管理 | C / ESP-IDF v5.3.1 / FreeRTOS |
 | [`miniprogram/`](miniprogram/README.md) | **微信小程序** — 实时位置、轨迹回放、CAN 状态、历史图表、告警推送 | 微信云开发 / 云函数 |
-| [`iot/`](iot/README.md) | **4G 物联网模块** — 串口桥接脚本，HTTP 上报 + MQTT 下行指令 | Lua（银尔达平台） |
+| [`iot/`](iot/README.md) | **4G 物联网模块（银尔达 M100PG-DTU 固件版）** — 串口桥接脚本，HTTP 上报 + MQTT 下行指令 | Lua（银尔达平台） |
 
 ## 🏗️ 系统架构
 

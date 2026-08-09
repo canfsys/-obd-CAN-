@@ -1,0 +1,326 @@
+GPIO1唤醒
+[06:39:26.528] I (71669) MAIN: ===== 空闲超时, 进入待机 =====
+[06:39:26.528] I (71669) TWAI: 卸载 TWAI 驱动
+[06:39:26.528] I (71669) SD_CARD: SD 卡已卸载
+[06:39:26.528] I (71679) POWER_MGR: ===== light sleep =====
+[06:39:26.528] I (71679) SPI_BUS: SIT1145-1 TX(16bit): 98 03 | (无RX)
+[06:39:26.528] I (71689) POWER_MGR: SIT1145-1 写 0x4C = 0x03
+[06:39:26.528] I (71689) SPI_BUS: SIT1145-1 TX(16bit): 40 01 | (无RX)
+[06:39:26.528] I (71699) POWER_MGR: SIT1145-1 写 0x20 = 0x01
+[06:39:26.528] I (71709) SPI_BUS: SIT1145-1 TX(16bit): 08 00 | (无RX)
+[06:39:26.528] I (71709) POWER_MGR: SIT1145-1 写 0x04 = 0x00
+[06:39:26.528] I (71719) SPI_BUS: SIT1145-1 TX(16bit): 46 01 | (无RX)
+[06:39:26.528] I (71719) POWER_MGR: SIT1145-1 写 0x23 = 0x01
+[06:39:26.528] I (71729) SPI_BUS: SIT1145-1 TX(16bit): C2 FF | (无RX)
+[06:39:26.528] I (71729) POWER_MGR: SIT1145-1 写 0x61 = 0xFF
+[06:39:26.528] I (71739) SPI_BUS: SIT1145-1 TX(16bit): C3 00 | RX: C3 00 
+[06:39:26.528] I (71739) POWER_MGR:   回读 0x61=0x00
+[06:39:26.528] I (71749) SPI_BUS: SIT1145-1 TX(16bit): C6 FF | (无RX)
+[06:39:26.528] I (71749) POWER_MGR: SIT1145-1 写 0x63 = 0xFF
+[06:39:26.528] I (71759) SPI_BUS: SIT1145-1 TX(16bit): C8 FF | (无RX)
+[06:39:26.528] I (71769) POWER_MGR: SIT1145-1 写 0x64 = 0xFF
+[06:39:26.528] I (71769) SPI_BUS: SIT1145-1 TX(16bit): C9 00 | RX: C9 00 
+[06:39:26.528] I (71779) POWER_MGR:   回读 0x64=0x00
+[06:39:26.528] I (71779) SPI_BUS: SIT1145-1 TX(16bit): 02 01 | (无RX)
+[06:39:26.528] I (71789) POWER_MGR: SIT1145-1 写 0x01 = 0x01
+[06:39:26.528] I (71789) SPI_BUS: SIT1145-2 TX(16bit): 98 03 | (无RX)
+[06:39:26.528] I (71799) POWER_MGR: SIT1145-2 写 0x4C = 0x03
+[06:39:26.528] I (71799) SPI_BUS: SIT1145-2 TX(16bit): 40 01 | (无RX)
+[06:39:26.528] I (71809) POWER_MGR: SIT1145-2 写 0x20 = 0x01
+[06:39:26.528] I (71809) SPI_BUS: SIT1145-2 TX(16bit): 08 00 | (无RX)
+[06:39:26.528] I (71819) POWER_MGR: SIT1145-2 写 0x04 = 0x00
+[06:39:26.528] I (71829) SPI_BUS: SIT1145-2 TX(16bit): 46 01 | (无RX)
+[06:39:26.528] I (71829) POWER_MGR: SIT1145-2 写 0x23 = 0x01
+[06:39:26.528] I (71839) SPI_BUS: SIT1145-2 TX(16bit): C2 FF | (无RX)
+[06:39:26.528] I (71839) POWER_MGR: SIT1145-2 写 0x61 = 0xFF
+[06:39:26.528] I (71849) SPI_BUS: SIT1145-2 TX(16bit): C3 00 | RX: C3 00 
+[06:39:26.528] I (71849) POWER_MG
+[06:39:26.725] R:   回读 0x61=0x00
+[06:39:26.725] I (71859) SPI_BUS: SIT1145-2 TX(16bit): C6 FF | (无RX)
+[06:39:26.725] I (71859) POWER_MGR: SIT1145-2 写 0x63 = 0xFF
+[06:39:26.725] I (71869) SPI_BUS: SIT1145-2 TX(16bit): C8 FF | (无RX)
+[06:39:26.725] I (71879) POWER_MGR: SIT1145-2 写 0x64 = 0xFF
+[06:39:26.725] I (71879) SPI_BUS: SIT1145-2 TX(16bit): C9 00 | RX: C9 00 
+[06:39:26.725] I (71889) POWER_MGR:   回读 0x64=0x00
+[06:39:26.725] I (71889) SPI_BUS: SIT1145-2 TX(16bit): 02 01 | (无RX)
+[06:39:26.725] I (71899) POWER_MGR: SIT1145-2 写 0x01 = 0x01
+[06:39:26.725] I (71899) POWER_MGR: MCP2515: 清除 WAKIF
+[06:39:26.725] I (71909) SPI_BUS: MCP2515 TX(32bit): 05 2C 40 00 | (无RX)
+[06:39:26.725] I (71909) POWER_MGR: MCP2515: 使能 WAKIE
+[06:39:26.725] I (71919) SPI_BUS: MCP2515 TX(32bit): 05 2B 40 40 | (无RX)
+[06:39:26.725] I (71919) POWER_MGR: MCP2515: 休眠
+[06:39:26.725] I (71929) SPI_BUS: MCP2515 TX(32bit): 05 0F E0 20 | (无RX)
+[06:39:26.725] I (71929) POWER_MGR: SPI/CAN 休眠完成 (已清除初始化标
+[06:39:31.231] 志)
+[06:39:31.231] rtc_gpio_is_valid_gpio(GPIO1) = 1
+[06:39:31.231] I (71949) POWER_MGR: 进入 light sleep (3min GPS, GPIO1/42 唤醒)
+[06:39:31.231] I (71949) POWER_MGR: 唤醒 原因=3(EXT1(GPIO1))
+[06:39:31.231] I (71969) MAIN: ===== 唤醒后重新初始化外设 =====
+[06:39:31.231] I (71969) MAIN: [1/5] 重新添加 SPI 设备...
+[06:39:31.231] I (71969) SPI_BUS: 删除 SPI 设备 (handle=0x0x3fca6e00)
+[06:39:31.231] I (71979) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.231] I (71989) SPI_BUS: 删除 SPI 设备 (handle=0x0x3fca6fb0)
+[06:39:31.231] I (71989) gpio: GPIO[6]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.231] I (71999) SPI_BUS: 删除 SPI 设备 (handle=0x0x3fca7160)
+[06:39:31.231] I (72009) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.231] I (72019) SPI_BUS: 设备 (CS=5) 添加成功, 速度=1000000Hz, mode=1
+[06:39:31.231] I (72019) SPI_BUS: 设备 (CS=6) 添加成功, 速度=1000000Hz, mode=1
+[06:39:31.231] I (72029) SPI_BUS: 设备 (CS=7) 添加成功, 速度=8000000Hz, mode=0
+[06:39:31.231] I (72039) MAIN: [2/5] 初始化 SIT1145...
+[06:39:31.231] I (72039) SIT1145: 初始化 SIT1145-1 (CS=GPIO5)
+[06:39:31.231] I (72049) SPI_BUS: SIT1145-1 TX(16bit): 02 07 | (无RX)
+[06:39:31.231] I (72059) SPI_BUS: SIT1145-1 TX(16bit): 56 03 | (无RX)
+[06:39:31.231] I (72059) SIT1145: SIT1145-1 写入: reg[0x26]=0x02
+[06:39:31.231] I (72069) SPI_BUS: SIT1145-1 TX(16bit): 4C 02 | (无RX)
+[06:39:31.231] I (72069) SIT1145: SIT1145-1 写入: reg[0x20]=0x32
+[06:39:31.231] I (72079) SPI_BUS: SIT1145-1 TX(16bit): 40 32 | (无RX)
+[06:39:31.231] I (72079) SPI_BUS: SIT1145-1 TX(16bit): 4D 00 | RX: 4D 02 
+[06:39:31.231] I (72089) SPI_BUS: SIT1145-1 TX(16bit): 41 00 | RX: 41 32 
+[06:39:31.231] I (72099) SPI_BUS: SIT1145-1 TX(16bit): 45 00 | RX: 45 A0 
+[06:39:31.231] I (72099) SIT1145: SIT1145-1 读回验证: reg[0x26]=0x02, reg[0x20]=0x32, reg[0x22]=0xA0
+[06:39:31.231] I (72109) SIT1145: SIT1145-1 验证通过 ✓
+[06:39:31.231] I (72119) SIT1145: SIT1145-1 初始化完成 (retry=0)
+[06:39:31.231] I (72119) SIT1145: 初始化 SIT1145-2 (CS=GPIO6)
+[06:39:31.231] I (72129) SPI_BUS: SIT1145-2 TX(16bit): 02 07 | (无RX)
+[06:39:31.231] I (72129) SPI_BUS: SIT1145-2 TX(16bit): 56 03 | (无RX)
+[06:39:31.231] I 
+[06:39:31.429] (72139) SIT1145: SIT1145-2 写入: reg[0x26]=0x05
+[06:39:31.429] I (72139) SPI_BUS: SIT1145-2 TX(16bit): 4C 05 | (无RX)
+[06:39:31.429] I (72149) SIT1145: SIT1145-2 写入: reg[0x20]=0x32
+[06:39:31.429] I (72159) SPI_BUS: SIT1145-2 TX(16bit): 40 32 | (无RX)
+[06:39:31.429] I (72159) SPI_BUS: SIT1145-2 TX(16bit): 4D 00 | RX: 4D 05 
+[06:39:31.429] I (72169) SPI_BUS: SIT1145-2 TX(16bit): 41 00 | RX: 41 32 
+[06:39:31.429] I (72169) SPI_BUS: SIT1145-2 TX(16bit): 45 00 | RX: 45 A8 
+[06:39:31.429] I (72179) SIT1145: SIT1145-2 读回验证: reg[0x26]=0x05, reg[0x20]=0x32, reg[0x22]=0xA8
+[06:39:31.429] I (72189) SIT1145: SIT1145-2 验证通过 ✓
+[06:39:31.429] I (72189) SIT1145: SIT1145-2 初始化完成 (retry=0)
+[06:39:31.429] I (72199) MAIN: [3/5] 初始化 MCP2515...
+[06:39:31.429] I (72209) MCP2515: MCP2515 初始化开始 (INT=GPIO8)
+[06:39:31.429] I (72209) MCP2515: GPIO8 下降沿中断已安装
+[06:39:31.429] I (72219) SPI_BUS: MCP2515 TX(8bit): C0 | (无RX)
+[06:39:31.429] I (72229) MCP2515: 复位完成
+[06:39:31.429] I (72229) SPI_BUS: MCP2515 TX(24bit): 02 2A 00 | (无RX)
+[06:39:31.429] I (72229) SPI_BUS: MCP2515 TX(24bit): 02 29 90 | (无RX)
+[06:39:31.429] I (72239) SPI_BUS: MCP2515 TX(24bit): 02 28 02 | (无RX)
+[06:39:31.429] I (72239) MCP2515: 波特率配置完成 (CNF1=0x00, CNF2=0x90, CNF3=0x02)
+[06:39:31.429] I (72249) SPI_BUS: MCP2515 TX(24bit): 02 60 60 | (无RX)
+[06:39:31.429] I (72259) SPI_BUS: MCP2515 TX(24bit): 02 70 60 | (无RX)
+[06:39:31.429] I (72259) MCP2515: 过滤器已关闭 (接收所有帧)
+[06:39:31.429] I (72269) SPI_BUS: MCP2515 TX(24bit): 02 0C 00 | (无RX)
+[06:39:31.429] I (72269) MCP2515: RXnBF 引脚中断已关闭
+[06:39:31.429] I (72279) SPI_BUS: MCP2515 TX(24bit): 02 2B 03 | (无RX)
+[06:39:31.429] I (72289) MCP2515: INT 引脚中断已开启 (RXB0IE + RXB1IE)
+[06:39:31.429] I (72289) SPI_BUS: MCP2515 TX(24bit): 02 2C 00 | (无RX)
+[06:39:31.429] I (72299) MCP2515: 中断标志已清除
+[06:39:31.429] I (72299) SPI_BUS: MCP2515 TX(24bit): 02 0F 00 | (无RX)
+[06:39:31.429] I (72309) SPI_BUS: MCP2515 TX(24bit): 03 0E 00 | RX: FF FF FF 
+[06:39:31.429] I (72319) MCP2515: MCP2515 验证 (retry=0, CANSTAT=0xFF, OPMOD=7 异常)
+[06:39:31.429] W (72319) MCP2515: OPMOD 异常, 复位重试...
+[06:39:31.429] I (72329) SPI_BUS: MCP2515 TX(8bit): C0 | (无RX)
+[06:39:31.429] I (72339) SPI_BUS: MCP2515 TX(24bit): 02 2A 00 | (无RX)
+[06:39:31.429] I (72339) SPI_BUS: MCP2515 TX(24bit): 02 29 90 | (无RX)
+[06:39:31.635] 
+[06:39:31.635] I (72349) SPI_BUS: MCP2515 TX(24bit): 02 28 02 | (无RX)
+[06:39:31.635] I (72349) SPI_BUS: MCP2515 TX(24bit): 02 60 60 | (无RX)
+[06:39:31.635] I (72359) SPI_BUS: MCP2515 TX(24bit): 02 70 60 | (无RX)
+[06:39:31.635] I (72359) SPI_BUS: MCP2515 TX(24bit): 02 0C 00 | (无RX)
+[06:39:31.635] I (72369) SPI_BUS: MCP2515 TX(24bit): 02 2B 03 | (无RX)
+[06:39:31.635] I (72379) SPI_BUS: MCP2515 TX(24bit): 02 2C 00 | (无RX)
+[06:39:31.635] I (72379) SPI_BUS: MCP2515 TX(24bit): 02 0F 00 | (无RX)
+[06:39:31.635] I (72389) MCP2515: 重试 1: 重新配置 CANCTRL=0x00
+[06:39:31.635] I (72389) SPI_BUS: MCP2515 TX(24bit): 03 0E 00 | RX: FF FF 00 
+[06:39:31.635] I (72399) MCP2515: MCP2515 验证 (retry=1, CANSTAT=0x00, OPMOD=0 Normal ✓)
+[06:39:31.635] I (72409) MAIN: [4/5] 挂载 SD 卡...
+[06:39:31.635] I (72409) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.635] I (72419) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.635] I (72429) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.635] I (72439) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.635] I (72449) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.635] I (72459) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.858] I (72579) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.858] I (72579) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.858] I (72589) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.858] I (72599) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.858] I (72609) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.858] I (72619) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[06:39:31.858] I (72659) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:39:31.858] Name: SD
+[06:39:31.858] Type: SDHC/SDXC
+[06:39:31.858] Speed: 20.00 MHz (limit: 20.00 MHz)
+[06:39:31.858] Size: 29818MB
+[06:39:31.858] CSD: ver=2, sector_size=512, capacity=61067264 read_bl_len=9
+[06:39:31.858] SSR: bus_width=4
+[06:39:31.858] I (72679) SD_CARD: SD 卡初始化成功
+[06:39:33.532] I (74249) SD_LOG: sit1145: 新文件 /sdcard/sit1145/can_0322.csv 已创建 (编号=322)
+[06:39:35.047] I (75769) SD_LOG: mcp2515: 新文件 /sdcard/mcp2515/can_0321.csv 已创建 (编号=321)
+[06:39:35.047] I (75769) MAIN: [5/5] 注册句柄...
+[06:39:35.047] I (75769) MCP2515: 已注册任务 (handle=0x0x3fca8768) 接收 MCP2515 中断通知
+[06:39:35.047] I (75779) MAIN: ===== 外设重新初始化完成 =====
+[06:39:35.362] Guru Meditation Error: Core  1 panic'ed (Interrupt wdt timeout on CPU1). 
+[06:39:35.362] 
+[06:39:35.362] Core  1 register dump:
+[06:39:35.362] PC      : 0x4037a0fe  PS      : 0x00060834  A0      : 0x8037e55c  A1      : 0x3fca9220  
+[06:39:35.362] A2      : 0x3c061330  A3      : 0xb33fffff  A4      : 0x0000abab  A5      : 0x00060a23  
+[06:39:35.362] A6      : 0x00001b8a  A7      : 0x3fc9a740  A8      : 0x00000000  A9      : 0x00060823  
+[06:39:35.362] A10     : 0x3c061330  A11     : 0x3fc9808c  A12     : 0x00000000  A13     : 0x4cc00001  
+[06:39:35.362] A14     : 0x3c046b3f  A15     : 0x0000abab  SAR     : 0x0000000a  EXCCAUSE: 0x00000006  
+[06:39:35.362] EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0x00000000  
+[06:39:35.362] 
+
+
+
+
+GPIO42唤醒
+[06:38:05.131] I (65575) MAIN: ===== 空闲超时, 进入待机 =====
+[06:38:05.131] I (65575) TWAI: 卸载 TWAI 驱动
+[06:38:05.131] I (65575) SD_CARD: SD 卡已卸载
+[06:38:05.131] I (65585) POWER_MGR: ===== light sleep =====
+[06:38:05.131] I (65585) SPI_BUS: SIT1145-1 TX(16bit): 98 03 | (无RX)
+[06:38:05.131] I (65595) POWER_MGR: SIT1145-1 写 0x4C = 0x03
+[06:38:05.131] I (65595) SPI_BUS: SIT1145-1 TX(16bit): 40 01 | (无RX)
+[06:38:05.131] I (65605) POWER_MGR: SIT1145-1 写 0x20 = 0x01
+[06:38:05.131] I (65615) SPI_BUS: SIT1145-1 TX(16bit): 08 00 | (无RX)
+[06:38:05.131] I (65615) POWER_MGR: SIT1145-1 写 0x04 = 0x00
+[06:38:05.131] I (65625) SPI_BUS: SIT1145-1 TX(16bit): 46 01 | (无RX)
+[06:38:05.131] I (65625) POWER_MGR: SIT1145-1 写 0x23 = 0x01
+[06:38:05.131] I (65635) SPI_BUS: SIT1145-1 TX(16bit): C2 FF | (无RX)
+[06:38:05.131] I (65635) POWER_MGR: SIT1145-1 写 0x61 = 0xFF
+[06:38:05.131] I (65645) SPI_BUS: SIT1145-1 TX(16bit): C3 00 | RX: C3 00 
+[06:38:05.131] I (65645) POWER_MGR:   回读 0x61=0x00
+[06:38:05.131] I (65655) SPI_BUS: SIT1145-1 TX(16bit): C6 FF | (无RX)
+[06:38:05.131] I (65655) POWER_MGR: SIT1145-1 写 0x63 = 0xFF
+[06:38:05.131] I (65665) SPI_BUS: SIT1145-1 TX(16bit): C8 FF | (无RX)
+[06:38:05.131] I (65675) POWER_MGR: SIT1145-1 写 0x64 = 0xFF
+[06:38:05.131] I (65675) SPI_BUS: SIT1145-1 TX(16bit): C9 00 | RX: C9 00 
+[06:38:05.131] I (65685) POWER_MGR:   回读 0x64=0x00
+[06:38:05.131] I (65685) SPI_BUS: SIT1145-1 TX(16bit): 02 01 | (无RX)
+[06:38:05.131] I (65695) POWER_MGR: SIT1145-1 写 0x01 = 0x01
+[06:38:05.131] I (65695) SPI_BUS: SIT1145-2 TX(16bit): 98 03 | (无RX)
+[06:38:05.131] I (65705) POWER_MGR: SIT1145-2 写 0x4C = 0x03
+[06:38:05.131] I (65705) SPI_BUS: SIT1145-2 TX(16bit): 40 01 | (无RX)
+[06:38:05.131] I (65715) POWER_MGR: SIT1145-2 写 0x20 = 0x01
+[06:38:05.131] I (65715) SPI_BUS: SIT1145-2 TX(16bit): 08 00 | (无RX)
+[06:38:05.131] I (65725) POWER_MGR: SIT1145-2 写 0x04 = 0x00
+[06:38:05.131] I (65735) SPI_BUS: SIT1145-2 TX(16bit): 46 01 | (无RX)
+[06:38:05.131] I (65735) POWER_MGR: SIT1145-2 写 0x23 = 0x01
+[06:38:05.131] I (65745) SPI_BUS: SIT1145-2 TX(16bit): C2 FF | (无RX)
+[06:38:05.131] I (65745) POWER_MGR: SIT1145-2 写 0x61 = 0xFF
+[06:38:05.131] I (65755) SPI_BUS: SIT1145-2 TX(16bit): C3 00 | RX: C3 00 
+[06:38:05.131] I (65755) POWER_MGR:   回读 0x61=0x00
+[06:38:05.131] I (65765) SPI_BUS: SIT1145-2 TX(16bit): C6 FF | (无RX)
+[06:38:05.131] I (65765) POWER_MGR: SIT1145-2 写 0x63 = 0xFF
+[06:38:05.131] I (65775) SPI_BUS: SIT1145-2 TX
+[06:38:05.346] (16bit): C8 FF | (无RX)
+[06:38:05.346] I (65785) POWER_MGR: SIT1145-2 写 0x64 = 0xFF
+[06:38:05.346] I (65785) SPI_BUS: SIT1145-2 TX(16bit): C9 00 | RX: C9 00 
+[06:38:05.346] I (65795) POWER_MGR:   回读 0x64=0x00
+[06:38:05.346] I (65795) SPI_BUS: SIT1145-2 TX(16bit): 02 01 | (无RX)
+[06:38:05.346] I (65805) POWER_MGR: SIT1145-2 写 0x01 = 0x01
+[06:38:05.346] I (65805) POWER_MGR: MCP2515: 清除 WAKIF
+[06:38:05.346] I (65815) SPI_BUS: MCP2515 TX(32bit): 05 2C 40 00 | (无RX)
+[06:38:05.346] I (65815) POWER_MGR: MCP2515: 使能 WAKIE
+[06:38:05.346] I (65825) SPI_BUS: MCP2515 TX(32bit): 05 2B 40 40 | (无RX)
+[06:38:05.346] I (65825) POWER_MGR: MCP2515: 休眠
+[06:38:05.346] I (65835) SPI_BUS: MCP2515 TX(32bit): 05 0F E0 20 | (无RX)
+[06:38:05.346] I (65835) POWER_MGR: SPI/CAN 休眠完成 (已清除初始化标
+[06:38:10.770] 志)
+[06:38:10.770] rtc_gpio_is_valid_gpio(GPIO1) = 1
+[06:38:10.770] I (65855) POWER_MGR: 进入 light sleep (3min GPS, GPIO1/42 唤醒)
+[06:38:10.770] I (65855) POWER_MGR: 唤醒 原因=7(IO MUX GPIO)
+[06:38:10.770] I (65875) MAIN: ===== 唤醒后重新初始化外设 =====
+[06:38:10.770] I (65875) MAIN: [1/5] 重新添加 SPI 设备...
+[06:38:10.770] I (65875) SPI_BUS: 删除 SPI 设备 (handle=0x0x3fca6e00)
+[06:38:10.770] I (65885) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:10.770] I (65895) SPI_BUS: 删除 SPI 设备 (handle=0x0x3fca6fb0)
+[06:38:10.770] I (65895) gpio: GPIO[6]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:10.770] I (65905) SPI_BUS: 删除 SPI 设备 (handle=0x0x3fca7160)
+[06:38:10.770] I (65915) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:10.770] I (65925) SPI_BUS: 设备 (CS=5) 添加成功, 速度=1000000Hz, mode=1
+[06:38:10.770] I (65925) SPI_BUS: 设备 (CS=6) 添加成功, 速度=1000000Hz, mode=1
+[06:38:10.770] I (65935) SPI_BUS: 设备 (CS=7) 添加成功, 速度=8000000Hz, mode=0
+[06:38:10.770] I (65945) MAIN: [2/5] 初始化 SIT1145...
+[06:38:10.770] I (65945) SIT1145: 初始化 SIT1145-1 (CS=GPIO5)
+[06:38:10.770] I (65955) SPI_BUS: SIT1145-1 TX(16bit): 02 07 | (无RX)
+[06:38:10.770] I (65965) SPI_BUS: SIT1145-1 TX(16bit): 56 03 | (无RX)
+[06:38:10.770] I (65965) SIT1145: SIT1145-1 写入: reg[0x26]=0x02
+[06:38:10.770] I (65975) SPI_BUS: SIT1145-1 TX(16bit): 4C 02 | (无RX)
+[06:38:10.770] I (65975) SIT1145: SIT1145-1 写入: reg[0x20]=0x32
+[06:38:10.770] I (65985) SPI_BUS: SIT1145-1 TX(16bit): 40 32 | (无RX)
+[06:38:10.770] I (65985) SPI_BUS: SIT1145-1 TX(16bit): 4D 00 | RX: 4D 02 
+[06:38:10.770] I (65995) SPI_BUS: SIT1145-1 TX(16bit): 41 00 | RX: 41 32 
+[06:38:10.770] I (66005) SPI_BUS: SIT1145-1 TX(16bit): 45 00 | RX: 45 A8 
+[06:38:10.770] I (66005) SIT1145: SIT1145-1 读回验证: reg[0x26]=0x02, reg[0x20]=0x32, reg[0x22]=0xA8
+[06:38:10.770] I (66015) SIT1145: SIT1145-1 验证通过 ✓
+[06:38:10.770] I (66025) SIT1145: SIT1145-1 初始化完成 (retry=0)
+[06:38:10.770] I (66025) SIT1145: 初始化 SIT1145-2 (CS=GPIO6)
+[06:38:10.770] I (66035) SPI_BUS: SIT1145-2 TX(16bit): 02 07 | (无RX)
+[06:38:10.770] I (66035) SPI_BUS: SIT1145-2 TX(16bit): 56 03 | (无RX)
+[06:38:10.770] I (66045) SIT1145: SIT1145-2 写入: reg[0x26]=0x05
+[06:38:10.770] I (66045) SPI_BUS: SIT1145-2 TX(16bit): 4C 05 | (无RX)
+[06:38:10.770] I (66055) SIT1145: SIT1145-2 写入: reg[0x20]=0x32
+[06:38:10.770] I (66065) SPI_BUS: SIT1145-2 T
+[06:38:10.987] X(16bit): 40 32 | (无RX)
+[06:38:10.987] I (66065) SPI_BUS: SIT1145-2 TX(16bit): 4D 00 | RX: 4D 05 
+[06:38:10.987] I (66075) SPI_BUS: SIT1145-2 TX(16bit): 41 00 | RX: 41 32 
+[06:38:10.987] I (66075) SPI_BUS: SIT1145-2 TX(16bit): 45 00 | RX: 45 A8 
+[06:38:10.987] I (66085) SIT1145: SIT1145-2 读回验证: reg[0x26]=0x05, reg[0x20]=0x32, reg[0x22]=0xA8
+[06:38:10.987] I (66095) SIT1145: SIT1145-2 验证通过 ✓
+[06:38:10.987] I (66095) SIT1145: SIT1145-2 初始化完成 (retry=0)
+[06:38:10.987] I (66105) MAIN: [3/5] 初始化 MCP2515...
+[06:38:10.987] I (66115) MCP2515: MCP2515 初始化开始 (INT=GPIO8)
+[06:38:10.987] I (66115) MCP2515: GPIO8 下降沿中断已安装
+[06:38:10.987] I (66125) SPI_BUS: MCP2515 TX(8bit): C0 | (无RX)
+[06:38:10.987] I (66135) MCP2515: 复位完成
+[06:38:10.987] I (66135) SPI_BUS: MCP2515 TX(24bit): 02 2A 00 | (无RX)
+[06:38:10.987] I (66135) SPI_BUS: MCP2515 TX(24bit): 02 29 90 | (无RX)
+[06:38:10.987] I (66145) SPI_BUS: MCP2515 TX(24bit): 02 28 02 | (无RX)
+[06:38:10.987] I (66145) MCP2515: 波特率配置完成 (CNF1=0x00, CNF2=0x90, CNF3=0x02)
+[06:38:10.987] I (66155) SPI_BUS: MCP2515 TX(24bit): 02 60 60 | (无RX)
+[06:38:10.987] I (66165) SPI_BUS: MCP2515 TX(24bit): 02 70 60 | (无RX)
+[06:38:10.987] I (66165) MCP2515: 过滤器已关闭 (接收所有帧)
+[06:38:10.987] I (66175) SPI_BUS: MCP2515 TX(24bit): 02 0C 00 | (无RX)
+[06:38:10.987] I (66175) MCP2515: RXnBF 引脚中断已关闭
+[06:38:10.987] I (66185) SPI_BUS: MCP2515 TX(24bit): 02 2B 03 | (无RX)
+[06:38:10.987] I (66195) MCP2515: INT 引脚中断已开启 (RXB0IE + RXB1IE)
+[06:38:10.987] I (66195) SPI_BUS: MCP2515 TX(24bit): 02 2C 00 | (无RX)
+[06:38:10.987] I (66205) MCP2515: 中断标志已清除
+[06:38:10.987] I (66205) SPI_BUS: MCP2515 TX(24bit): 02 0F 00 | (无RX)
+[06:38:10.987] I (66215) SPI_BUS: MCP2515 TX(24bit): 03 0E 00 | RX: FF FF 00 
+[06:38:10.987] I (66225) MCP2515: MCP2515 验证 (retry=0, CANSTAT=0x00, OPMOD=0 Normal ✓)
+[06:38:10.987] I (66225) MAIN: [4/5] 挂载 SD 卡...
+[06:38:10.987] I (66235) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:10.987] I (66245) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:10.987] I (66255) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:10.987] I (66265) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:10.987] I (66275) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:10.987] I (66275) gpio: GPIO[13]| InputEn: 0| 
+[06:38:11.206] OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:11.206] I (66395) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:11.206] I (66395) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:11.206] I (66405) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:11.206] I (66415) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:11.206] I (66425) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:11.206] I (66435) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[06:38:11.206] I (66475) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+[06:38:11.206] Name: SD
+[06:38:11.206] Type: SDHC/SDXC
+[06:38:11.206] Speed: 20.00 MHz (limit: 20.00 MHz)
+[06:38:11.206] Size: 29818MB
+[06:38:11.206] CSD: ver=2, sector_size=512, capacity=61067264 read_bl_len=9
+[06:38:11.206] SSR: bus_width=4
+[06:38:11.206] I (66495) SD_CARD: SD 卡初始化成功
+[06:38:12.903] I (67995) SD_LOG: sit1145: 新文件 /sdcard/sit1145/can_0320.csv 已创建 (编号=320)
+[06:38:14.404] I (69495) SD_LOG: mcp2515: 新文件 /sdcard/mcp2515/can_0319.csv 已创建 (编号=319)
+[06:38:14.404] I (69495) MAIN: [5/5] 注册句柄...
+[06:38:14.404] I (69495) MCP2515: 已注册任务 (handle=0x0x3fca8768) 接收 MCP2515 中断通知
+[06:38:14.404] I (69505) MAIN: ===== 外设重新初始化完成 =====
+[06:38:14.721] Guru Meditation Error: Core  1 panic'ed (Interrupt wdt timeout on CPU1). 
+[06:38:14.721] 
+[06:38:14.721] Core  1 register dump:
+[06:38:14.721] PC      : 0x4037a0f6  PS      : 0x00060834  A0      : 0x8037e55c  A1      : 0x3fca9220  
+[06:38:14.721] A2      : 0x3c061330  A3      : 0xb33fffff  A4      : 0x0000abab  A5      : 0x00060a23  
+[06:38:14.721] A6      : 0x00001946  A7      : 0x3fc9a740  A8      : 0x00000001  A9      : 0x00060823  
+[06:38:14.721] A10     : 0x3c061330  A11     : 0x3fc9808c  A12     : 0x00000000  A13     : 0x4cc00001  
+[06:38:14.721] A14     : 0x00000020  A15     : 0x0000abab  SAR     : 0x00000004  EXCCAUSE: 0x00000006  
+[06:38:14.721] EXCVADDR: 0x00000000  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xfffffffe  
+[06:38:14.721] 

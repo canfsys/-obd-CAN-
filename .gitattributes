@@ -1,0 +1,23 @@
+# 统一行尾为 LF, 避免跨平台差异
+* text=auto
+
+# 明确指定文本文件
+*.c text
+*.h text
+*.md text
+*.json text
+*.txt text
+*.yml text
+*.yaml text
+CMakeLists.txt text
+*.sh text eol=lf
+Dockerfile text
+
+# 二进制文件
+*.bin binary
+*.elf binary
+*.map binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.ico binary

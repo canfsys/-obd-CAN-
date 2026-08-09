@@ -1,0 +1,9 @@
+{
+  "name": "alertChecker",
+  "version": "1.0.0",
+  "description": "定时检测异常离线告警 + 订阅消息推送",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "latest"
+  }
+}

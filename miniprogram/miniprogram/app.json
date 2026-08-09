@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/example/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于在地图上显示您的当前位置"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

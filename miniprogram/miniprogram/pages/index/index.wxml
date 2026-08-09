@@ -1,0 +1,84 @@
+<view class="container">
+
+<!-- 地图 -->
+<map
+  id="map"
+  class="map"
+
+  latitude="{{mapLat}}"
+  longitude="{{mapLng}}"
+
+  scale="16"
+
+  show-location
+
+  markers="{{markers}}"
+
+  polyline="{{polyline}}"
+
+  circles="{{circles}}"
+
+  bindregionchange="onRegionChange"
+
+></map>
+
+<!-- 右侧悬浮按钮 -->
+<view class="map-tools">
+
+    <view
+    class="tool-btn {{followCar ? 'tool-btn-active' : ''}}"
+    bindtap="moveToCar"
+  >
+    🚗
+  </view>
+
+  <view class="tool-btn" bindtap="showAll">
+    🌍
+  </view>
+
+</view>
+
+<!-- 底部信息卡 -->
+<view id="card" class="card">
+
+  <view class="title">
+    车辆状态
+    <view class="alert-badge" wx:if="{{unreadAlertCount > 0}}">{{unreadAlertCount > 9 ? '9+' : unreadAlertCount}}</view>
+  </view>
+
+  <view class="row state-row">
+    <image class="state-icon" src="{{carStateIcon}}" mode="aspectFit"></image>
+    <text class="state-text {{carStateClass}}">{{carStateText}}</text>
+  </view>
+
+  <view class="row">
+    <text>📍 距离车辆</text>
+    <text>{{distance}} m</text>
+  </view>
+
+  <view class="row">
+    <text>🚗 当前车速</text>
+    <text>{{speed}} km/h</text>
+  </view>
+
+  <view class="row">
+    <text>🔔 推送通知</text>
+    <text class="subscribe-link" bindtap="onSubscribeNotification">点击授权（1次=1条）›</text>
+  </view>
+
+  <button class="detail-btn" bindtap="goDetail">
+  查看详细信息 →
+  </button>
+
+  <view class="row">
+    <text>🛰 GPS</text>
+    <text>{{gpsStatus}}</text>
+  </view>
+  <view class="row">
+    <text>📍 位置</text>
+    <text>{{lat}}, {{lng}}</text>
+  </view>
+
+</view>
+
+</view>

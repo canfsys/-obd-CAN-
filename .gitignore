@@ -1,44 +1,47 @@
+# ============================================================
+# 根目录 .gitignore (Monorepo: esp32/ + miniprogram/ + iot/)
+# ============================================================
+
+# === 通用 ===
 # macOS
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# Directory metadata
+# 目录元数据
 .directory
 
-# Temporary files
+# 临时文件
 *~
 *.swp
 *.swo
 *.bak
 *.tmp
 
-# Log files
+# 日志文件
 *.log
 
+# === ESP32 固件 (esp32/) ===
 # Build artifacts and directories
-**/build/
 build/
+**/build/
 *.o
 *.a
 *.out
-*.exe # For any host-side utilities compiled on Windows
+*.exe
 
 # ESP-IDF specific build outputs
 *.bin
 *.elf
 *.map
-flasher_args.json # Generated in build directory
-sdkconfig.old
+flasher_args.json
 sdkconfig
+sdkconfig.old
 
 # ESP-IDF dependencies
-# For older versions or manual component management
 /components/.idf/
 **/components/.idf/
-# For modern ESP-IDF component manager
 managed_components/
-# If ESP-IDF tools are installed/referenced locally to the project
 .espressif/
 
 # CMake generated files
@@ -48,34 +51,32 @@ cmake_install.cmake
 install_manifest.txt
 CTestTestfile.cmake
 
-# Python environment files
+# Language Servers
+.clangd/
+.ccls-cache/
+compile_commands.json
+
+# === 微信小程序 (miniprogram/) ===
+**/node_modules/
+miniprogram/project.private.config.json
+miniprogram/miniprogram_npm/
+miniprogram/.eslintrc.js
+
+# === 文件系统 ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === VS Code (本地个人配置, 含本机工具链路径/串口号, 不应公开) ===
+.vscode/
+
+# === Python 环境 ===
 *.pyc
 *.pyo
 *.pyd
 __pycache__/
 *.egg-info/
 dist/
-
-# Virtual environment folders
 venv/
 .venv/
 env/
-
-# Language Servers
-.clangd/
-.ccls-cache/
-compile_commands.json
-
-# VS Code (本地个人配置, 含本机工具链路径/串口号, 不应公开)
-.vscode/
-
-# Windows specific
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# User-specific configuration files
-*.user
-*.workspace # General workspace files, can be from various tools
-*.suo       # Visual Studio Solution User Options
-*.sln.docstates # Visual Studio

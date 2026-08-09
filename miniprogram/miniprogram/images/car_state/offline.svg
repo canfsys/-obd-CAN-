@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="64"
+     height="64"
+     viewBox="0 0 64 64">
+
+    <!-- 阴影 -->
+    <ellipse
+        cx="32"
+        cy="54"
+        rx="18"
+        ry="5"
+        fill="#D8D8D8"/>
+
+    <!-- 车身 -->
+    <rect
+        x="18"
+        y="10"
+        width="28"
+        height="44"
+        rx="8"
+        fill="#A0A0A0"/>
+
+    <!-- 挡风玻璃 -->
+    <rect
+        x="22"
+        y="15"
+        width="20"
+        height="10"
+        rx="3"
+        fill="#D9F0FF"/>
+
+    <!-- 后窗 -->
+    <rect
+        x="22"
+        y="39"
+        width="20"
+        height="10"
+        rx="3"
+        fill="#D9F0FF"/>
+
+    <!-- 车顶 -->
+    <rect
+        x="22"
+        y="28"
+        width="20"
+        height="8"
+        fill="#D9F0FF"/>
+
+    <!-- 左轮 -->
+    <rect
+        x="14"
+        y="18"
+        width="4"
+        height="10"
+        rx="2"
+        fill="#333"/>
+
+    <rect
+        x="14"
+        y="36"
+        width="4"
+        height="10"
+        rx="2"
+        fill="#333"/>
+
+    <!-- 右轮 -->
+    <rect
+        x="46"
+        y="18"
+        width="4"
+        height="10"
+        rx="2"
+        fill="#333"/>
+
+    <rect
+        x="46"
+        y="36"
+        width="4"
+        height="10"
+        rx="2"
+        fill="#333"/>
+
+</svg>

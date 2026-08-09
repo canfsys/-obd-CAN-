@@ -1,0 +1,472 @@
+/* ===========================
+   容器
+   =========================== */
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #f5f5f5;
+  position: relative;
+}
+
+/* ===========================
+   加载状态
+   =========================== */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.loading-spinner {
+  width: 60rpx;
+  height: 60rpx;
+  border: 4rpx solid #e0e0e0;
+  border-top-color: #1677ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 20rpx;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===========================
+   滚动区域
+   =========================== */
+.scroll-area {
+  width: 100%;
+  height: 100vh;
+  padding: 20rpx 24rpx;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   通用卡片
+   =========================== */
+.card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.card-icon {
+  font-size: 36rpx;
+  margin-right: 12rpx;
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.card-update {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.car-state-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+
+.car-state-tag {
+  font-size: 22rpx;
+  padding: 4rpx 14rpx;
+  border-radius: 20rpx;
+  font-weight: bold;
+}
+
+.car-state-online {
+  color: #52c41a;
+  background: #e6f7e6;
+}
+
+.car-state-offline {
+  color: #999;
+  background: #f5f5f5;
+}
+
+.car-state-lowpower {
+  color: #faad14;
+  background: #fffbe6;
+}
+
+.car-state-waiting {
+  color: #1677ff;
+  background: #e6f7ff;
+}
+
+/* ===========================
+   1. 车辆位置卡片
+   =========================== */
+.location-card {
+  border-left: 6rpx solid #1677ff;
+}
+
+.location-meta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20rpx;
+  margin-bottom: 16rpx;
+}
+
+.meta-item {
+  font-size: 22rpx;
+  color: #999;
+  background: #f5f5f5;
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+}
+
+.grid-4 {
+  display: grid;
+  gap: 16rpx;
+}
+
+.location-grid.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 20rpx;
+}
+
+.location-item {
+  text-align: center;
+  padding: 12rpx 0;
+  background: #f7f9fc;
+  border-radius: 12rpx;
+}
+
+.location-label {
+  display: block;
+  font-size: 22rpx;
+  color: #999;
+  margin-bottom: 6rpx;
+}
+
+.location-value {
+  display: block;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #1677ff;
+}
+
+.location-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16rpx;
+  font-size: 28rpx;
+  color: #1677ff;
+  border-top: 1rpx solid #f0f0f0;
+  margin-top: 8rpx;
+}
+
+.arrow {
+  font-size: 36rpx;
+  margin-left: 8rpx;
+}
+
+/* ===========================
+   2. 实时状态卡片
+   =========================== */
+.status-card {
+  border-left: 6rpx solid #52c41a;
+}
+
+.status-grid.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx 4rpx;
+  background: #f7f9fc;
+  border-radius: 14rpx;
+}
+
+.status-icon {
+  font-size: 36rpx;
+  margin-bottom: 8rpx;
+}
+
+.status-value {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 4rpx;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.status-label {
+  font-size: 20rpx;
+  color: #999;
+}
+
+/* 车门车窗组件 */
+.door-window-group {
+  width: 100%;
+}
+
+.dw-section {
+  margin-bottom: 12rpx;
+}
+
+.dw-section:last-child {
+  margin-bottom: 0;
+}
+
+.dw-title {
+  display: block;
+  font-size: 22rpx;
+  color: #666;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+  text-align: left;
+}
+
+.dw-row {
+  display: flex;
+  gap: 8rpx;
+  justify-content: center;
+  margin-bottom: 6rpx;
+}
+
+.dw-row:last-child {
+  margin-bottom: 0;
+}
+
+.dw-item {
+  font-size: 18rpx;
+  padding: 6rpx 14rpx;
+  border-radius: 8rpx;
+  min-width: 60rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 车门状态 */
+.door-closed {
+  background: #e6f7e6;
+  color: #52c41a;
+  border: 1rpx solid #b7eb8f;
+}
+
+.door-open {
+  background: #fff1f0;
+  color: #f5222d;
+  border: 1rpx solid #ffa39e;
+}
+
+/* 车窗状态 */
+.window-up {
+  background: #e6f7e6;
+  color: #52c41a;
+  border: 1rpx solid #b7eb8f;
+}
+
+.window-down {
+  background: #e6f7ff;
+  color: #1677ff;
+  border: 1rpx solid #91d5ff;
+}
+
+/* 寻车按钮 */
+.find-car-wrapper {
+  margin-top: 24rpx;
+}
+
+.find-car-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx;
+  background: #1677ff;
+  border-radius: 16rpx;
+  gap: 12rpx;
+}
+
+.find-car-disabled {
+  background: #a0c4ff;
+}
+
+.find-car-icon {
+  font-size: 36rpx;
+}
+
+.find-car-text {
+  font-size: 30rpx;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* ===========================
+   3. 历史数据卡片
+   =========================== */
+.history-card {
+  border-left: 6rpx solid #fa8c16;
+}
+
+.time-filter {
+  margin-left: auto;
+}
+
+.picker-btn {
+  display: flex;
+  align-items: center;
+  padding: 8rpx 20rpx;
+  background: #f0f5ff;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  color: #1677ff;
+}
+
+.picker-arrow {
+  font-size: 22rpx;
+  margin-left: 8rpx;
+  color: #1677ff;
+}
+
+.chart-toggles {
+  display: flex;
+  gap: 12rpx;
+  margin-bottom: 20rpx;
+}
+
+.toggle-item {
+  flex: 1;
+  text-align: center;
+  padding: 14rpx 0;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  background: #f0f0f0;
+  color: #666;
+}
+
+.toggle-active-voltage {
+  background: #e6f7ff;
+  color: #1677ff;
+  font-weight: bold;
+}
+
+.toggle-active-fuel {
+  background: #fff7e6;
+  color: #fa8c16;
+  font-weight: bold;
+}
+
+.toggle-active-temp {
+  background: #fff1f0;
+  color: #f5222d;
+  font-weight: bold;
+}
+
+.chart-container {
+  width: 100%;
+  margin-bottom: 24rpx;
+}
+
+.chart-canvas {
+  width: 100%;
+  height: 360rpx;
+  background: #fafafa;
+  border-radius: 12rpx;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 30rpx;
+  margin-top: 16rpx;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+  color: #666;
+}
+
+.legend-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 4rpx;
+  margin-right: 8rpx;
+}
+
+.legend-voltage { background: #1677ff; }
+.legend-fuel { background: #fa8c16; }
+.legend-temp { background: #f5222d; }
+
+.history-table {
+  border: 1rpx solid #f0f0f0;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
+  background: #f7f9fc;
+  padding: 16rpx 0;
+}
+
+.table-row {
+  display: flex;
+  padding: 16rpx 0;
+  border-top: 1rpx solid #f5f5f5;
+}
+
+.row-even { background: #fafafa; }
+
+.th, .td {
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.th {
+  font-weight: bold;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.th-time, .td-time { flex: 1.4; }
+
+.td { color: #555; }
+
+.table-body-scroll { max-height: 500rpx; }
+
+.table-empty {
+  text-align: center;
+  padding: 40rpx;
+  font-size: 26rpx;
+  color: #ccc;
+}
+
+/* ===========================
+   底部留白
+   =========================== */
+.bottom-space {
+  height: 60rpx;
+}

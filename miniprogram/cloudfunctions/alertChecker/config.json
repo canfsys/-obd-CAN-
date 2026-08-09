@@ -1,0 +1,9 @@
+{
+  "triggers": [
+    {
+      "name": "alertTimer",
+      "type": "timer",
+      "config": "rate(20 minutes)"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "车辆详情",
+  "enablePullDownRefresh": false,
+  "backgroundColor": "#f5f5f5"
+}

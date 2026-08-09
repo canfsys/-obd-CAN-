@@ -1,0 +1,240 @@
+<view class="container">
+
+  <!-- ===========================
+       加载状态
+  =========================== -->
+  <view class="loading" wx:if="{{loading}}">
+    <view class="loading-spinner"></view>
+    <text>加载中...</text>
+  </view>
+
+  <!-- ===========================
+       内容区域（滚动）
+  =========================== -->
+  <scroll-view
+    scroll-y
+    class="scroll-area"
+    wx:if="{{!loading}}"
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+
+    <!-- ====================
+         1. 车辆位置卡片
+    ==================== -->
+    <view class="card location-card">
+      <view class="card-header">
+        <image class="car-state-icon" src="{{carStateIcon}}"></image>
+        <text class="card-title">车辆位置</text>
+        <text class="car-state-tag {{carStateClass}}">{{displayCarStateText}}</text>
+      </view>
+      <view class="location-meta">
+        <text class="meta-item">🛰 {{satellites}}颗</text>
+        <text class="meta-item">📡 HDOP {{hdop}}</text>
+        <text class="meta-item">📡 {{gpsStatusText}}</text>
+      </view>
+      <view class="location-grid grid-4">
+        <view class="location-item">
+          <text class="location-label">纬度</text>
+          <text class="location-value">{{lat}}</text>
+        </view>
+        <view class="location-item">
+          <text class="location-label">经度</text>
+          <text class="location-value">{{lng}}</text>
+        </view>
+        <view class="location-item">
+          <text class="location-label">速度</text>
+          <text class="location-value">{{speed}} km/h</text>
+        </view>
+        <view class="location-item">
+          <text class="location-label">海拔</text>
+          <text class="location-value">{{correctedAltitude}}m</text>
+        </view>
+      </view>
+      <view class="location-action" bindtap="goToMap">
+        <text>在地图中查看</text>
+        <text class="arrow">›</text>
+      </view>
+    </view>
+
+    <!-- ====================
+         2. 实时状态卡片
+    ==================== -->
+    <view class="card status-card">
+      <view class="card-header">
+        <text class="card-icon">📊</text>
+        <text class="card-title">实时状态</text>
+      </view>
+
+      <!-- 状态网格 4 列 -->
+      <view class="status-grid grid-4">
+        <view class="status-item">
+          <view class="status-icon">🔋</view>
+          <text class="status-value">{{displayVoltage}}</text>
+          <text class="status-label">电压</text>
+        </view>
+        <view class="status-item">
+          <view class="status-icon">🌡</view>
+          <text class="status-value">{{displayTemperature}}</text>
+          <text class="status-label">温度</text>
+        </view>
+        <view class="status-item">
+          <view class="status-icon">🚗</view>
+          <text class="status-value" style="font-size:24rpx;">{{displayIgnition}}</text>
+          <text class="status-label">引擎</text>
+        </view>
+        <view class="status-item">
+          <view class="status-icon">🔥</view>
+          <text class="status-value">{{displayRpm}}</text>
+          <text class="status-label">转速</text>
+        </view>
+
+        <view class="status-item">
+          <view class="status-icon">🛢</view>
+          <text class="status-value">{{displayThrottle}}</text>
+          <text class="status-label">油门</text>
+        </view>
+        <view class="status-item">
+          <view class="status-icon">🅱</view>
+          <text class="status-value" style="font-size:24rpx;">{{displayBrake}}</text>
+          <text class="status-label">刹车</text>
+        </view>
+        <view class="status-item">
+          <view class="status-icon">🤚</view>
+          <text class="status-value" style="font-size:24rpx;">{{displayHandbrake}}</text>
+          <text class="status-label">手刹</text>
+        </view>
+        <view class="status-item">
+          <view class="status-icon">💡</view>
+          <text class="status-value" style="font-size:24rpx;">{{displayLight}}</text>
+          <text class="status-label">灯光</text>
+        </view>
+
+        <view class="status-item">
+          <view class="status-icon">🏎</view>
+          <text class="status-value">{{displayWheelSpeed}}</text>
+          <text class="status-label">轮速</text>
+        </view>
+        <view class="status-item" style="grid-column:span 3;">
+          <view class="door-window-group">
+            <!-- 车门状态（前门一排，后门一排，尾门单独） -->
+            <view class="dw-section">
+              <text class="dw-title">🚪 车门</text>
+              <view class="dw-row">
+                <view class="dw-item {{door[0] === '1' ? 'door-open' : 'door-closed'}}">{{door[0] === '1' ? '开' : '关'}}左前</view>
+                <view class="dw-item {{door[1] === '1' ? 'door-open' : 'door-closed'}}">{{door[1] === '1' ? '开' : '关'}}右前</view>
+              </view>
+              <view class="dw-row">
+                <view class="dw-item {{door[2] === '1' ? 'door-open' : 'door-closed'}}">{{door[2] === '1' ? '开' : '关'}}左后</view>
+                <view class="dw-item {{door[3] === '1' ? 'door-open' : 'door-closed'}}">{{door[3] === '1' ? '开' : '关'}}右后</view>
+              </view>
+              <view class="dw-row">
+                <view class="dw-item {{door[4] === '1' ? 'door-open' : 'door-closed'}}">{{door[4] === '1' ? '开' : '关'}}尾门</view>
+              </view>
+            </view>
+            <!-- 车窗状态（2×2） -->
+            <view class="dw-section">
+              <text class="dw-title">🪟 车窗</text>
+              <view class="dw-row">
+                <view class="dw-item {{window[0] === '1' ? 'window-down' : 'window-up'}}">{{window[0] === '1' ? '降' : '升'}}左前</view>
+                <view class="dw-item {{window[1] === '1' ? 'window-down' : 'window-up'}}">{{window[1] === '1' ? '降' : '升'}}右前</view>
+              </view>
+              <view class="dw-row">
+                <view class="dw-item {{window[2] === '1' ? 'window-down' : 'window-up'}}">{{window[2] === '1' ? '降' : '升'}}左后</view>
+                <view class="dw-item {{window[3] === '1' ? 'window-down' : 'window-up'}}">{{window[3] === '1' ? '降' : '升'}}右后</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 寻车按钮（通过 EMQX REST API 下发指令） -->
+      <view class="find-car-wrapper">
+        <view class="find-car-btn" bindtap="onFindCar">
+          <text class="find-car-icon">🔊</text>
+          <text class="find-car-text">寻车鸣笛</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- ====================
+         3. 历史数据卡片
+    ==================== -->
+    <view class="card history-card">
+      <view class="card-header">
+        <text class="card-icon">📈</text>
+        <text class="card-title">历史数据</text>
+        <view class="time-filter">
+          <picker
+            mode="selector"
+            range="{{timeRangeOptions}}"
+            value="{{timeRangeIndex}}"
+            bindchange="onTimeRangeChange"
+          >
+            <view class="picker-btn">
+              <text>{{timeRangeOptions[timeRangeIndex]}}</text>
+              <text class="picker-arrow">▾</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="chart-toggles">
+        <view
+          class="toggle-item {{chartType === 'voltage' ? 'toggle-active-voltage' : ''}}"
+          data-type="voltage" bindtap="onChartTypeChange"
+        >电压</view>
+        <view
+          class="toggle-item {{chartType === 'fuel' ? 'toggle-active-fuel' : ''}}"
+          data-type="fuel" bindtap="onChartTypeChange"
+        >燃油</view>
+        <view
+          class="toggle-item {{chartType === 'temperature' ? 'toggle-active-temp' : ''}}"
+          data-type="temperature" bindtap="onChartTypeChange"
+        >温度</view>
+      </view>
+
+      <view class="chart-container">
+        <canvas type="2d" id="historyChart" class="chart-canvas"></canvas>
+        <view class="chart-legend">
+          <view class="legend-item">
+            <view class="legend-dot legend-voltage"></view><text>电压 (V)</text>
+          </view>
+          <view class="legend-item">
+            <view class="legend-dot legend-fuel"></view><text>燃油 (%)</text>
+          </view>
+          <view class="legend-item">
+            <view class="legend-dot legend-temp"></view><text>温度 (°C)</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="history-table">
+        <view class="table-header">
+          <text class="th th-time">时间</text>
+          <text class="th">电压</text>
+          <text class="th">燃油</text>
+          <text class="th">温度</text>
+        </view>
+        <scroll-view scroll-y class="table-body-scroll" wx:if="{{historyDisplayList.length > 0}}">
+          <view
+            class="table-row {{index % 2 === 0 ? 'row-even' : ''}}"
+            wx:for="{{historyDisplayList}}" wx:key="time"
+          >
+            <text class="td td-time">{{item.timeStr}}</text>
+            <text class="td">{{item.voltage}}V</text>
+            <text class="td">{{item.fuel}}%</text>
+            <text class="td">{{item.temperature}}°C</text>
+          </view>
+        </scroll-view>
+        <view class="table-empty" wx:if="{{historyList.length === 0}}">
+          <text>暂无历史数据</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="bottom-space"></view>
+
+  </scroll-view>
+
+</view>

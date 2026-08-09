@@ -1,0 +1,179 @@
+/* 整个页面 */
+
+.container{
+
+  width:100%;
+  height:100vh;
+
+  position:relative;
+
+  background:#f5f5f5;
+
+}
+
+/* 地图 */
+
+.map{
+
+  width:100%;
+
+  height:100%;
+
+}
+
+/* ========================= */
+/* 悬浮按钮 */
+/* ========================= */
+
+.map-tools{
+
+  position:absolute;
+
+  right:24rpx;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20rpx;
+
+  z-index:999;
+
+}
+
+.tool-btn{
+
+  width:90rpx;
+
+  height:90rpx;
+
+  background:#ffffff;
+
+  border-radius:45rpx;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:42rpx;
+
+  margin-top:20rpx;
+
+  box-shadow:0 8rpx 20rpx rgba(0,0,0,.18);
+
+}
+
+.tool-btn-active{
+
+  background:#1677FF;
+
+  color:#FFFFFF;
+
+}
+
+/* ========================= */
+/* 底部卡片 */
+/* ========================= */
+
+.card{
+
+  position:absolute;
+
+  left:20rpx;
+
+  right:20rpx;
+
+  bottom:25rpx;
+
+  background:#ffffff;
+
+  border-radius:25rpx;
+
+  padding:25rpx;
+
+  box-shadow:0 8rpx 20rpx rgba(0,0,0,.15);
+
+}
+
+.title{
+  font-size:34rpx;
+  font-weight:bold;
+  margin-bottom:20rpx;
+  position:relative;
+  display:inline-block;
+}
+
+/* 告警红点 */
+.alert-badge{
+  position:absolute;
+  top:-10rpx;
+  right:-50rpx;
+  min-width:32rpx;
+  height:32rpx;
+  background:#ff4d4f;
+  color:#ffffff;
+  font-size:20rpx;
+  font-weight:bold;
+  border-radius:16rpx;
+  text-align:center;
+  line-height:32rpx;
+  padding:0 8rpx;
+}
+
+.row{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  font-size:30rpx;
+
+  margin-top:15rpx;
+
+}
+
+/* 车辆状态行 */
+
+.state-row{
+  align-items:center;
+  justify-content:flex-start;
+  gap:12rpx;
+}
+
+.state-icon{
+  width:32rpx;
+  height:32rpx;
+}
+
+.state-text{
+  font-size:30rpx;
+  font-weight:500;
+}
+
+.subscribe-link{
+  color:#1677ff;
+  font-size:28rpx;
+}
+
+/* 车辆状态颜色（与详情页一致） */
+.car-state-online {
+  color: #52c41a;
+}
+
+.car-state-offline {
+  color: #999;
+}
+
+.car-state-lowpower {
+  color: #faad14;
+}
+
+.car-state-waiting {
+  color: #1677ff;
+}

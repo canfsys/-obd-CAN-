@@ -27,4 +27,20 @@ Dockerfile text
 *.drl binary
 *.xlsx binary
 *.zip binary
+# 嘉立创 Gerber 制造文件 (按二进制处理, 避免行尾转换影响制造数据)
+hardware/gerber/*.GTL binary
+hardware/gerber/*.GBL binary
+hardware/gerber/*.GTO binary
+hardware/gerber/*.GBO binary
+hardware/gerber/*.GTS binary
+hardware/gerber/*.GBS binary
+hardware/gerber/*.GTP binary
+hardware/gerber/*.GBP binary
+hardware/gerber/*.GKO binary
+hardware/gerber/*.GDL binary
+hardware/gerber/*.GDD binary
+hardware/gerber/*.G1 binary
+hardware/gerber/*.G2 binary
+hardware/gerber/*.DRL binary
+hardware/gerber/*.json binary
 

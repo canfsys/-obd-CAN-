@@ -27,6 +27,7 @@ Dockerfile text
 *.drl binary
 *.xlsx binary
 *.zip binary
+*.eprj2 binary
 # 嘉立创 Gerber 制造文件 (按二进制处理, 避免行尾转换影响制造数据)
 hardware/gerber/*.GTL binary
 hardware/gerber/*.GBL binary

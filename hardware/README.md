@@ -38,12 +38,13 @@ hardware/
 │   ├── FlyingProbeTesting.json    # 飞针测试文件
 │   └── PCB下单必读.txt
 ├── bom/
-│   └── BOM_Board1_PCB1.xlsx       # 物料清单（元器件/数量/封装）
+│   ├── BOM_Board1_PCB1.xlsx       # 物料清单（元器件/数量/封装）
+│   └── PickAndPlace_PCB1.xlsx     # 贴片坐标文件（SMT 使用）
 ├── images/
 │   ├── 3D_PCB1_TopLayer.png       # PCB 3D 顶面预览
 │   └── 3D_PCB1_BottomLayer.png    # PCB 3D 底面预览
-└── source/                        # 嘉立创EDA工程源文件（.eprj）
-                                   # ⚠️ 待补充：可二次编辑的源文件
+└── source/
+    └── OBD_CAN_Module_v2.0.eprj2  # 嘉立创EDA专业版工程源文件（可二次编辑）
 ```
 
 ## 🔌 引脚分配
@@ -76,13 +77,12 @@ hardware/
 
 ### 贴片生产（SMT）
 1. 打开 `bom/BOM_Board1_PCB1.xlsx` 核对元器件
-2. 配合飞针测试文件 `FlyingProbeTesting.json` 验证
+2. 使用 `bom/PickAndPlace_PCB1.xlsx` 贴片坐标文件
+3. 配合飞针测试文件 `FlyingProbeTesting.json` 验证
 
 ### 二次开发（修改电路）
-1. 用嘉立创EDA专业版打开 `source/` 中的 `.eprj` 工程文件
+1. 用嘉立创EDA专业版打开 `source/OBD_CAN_Module_v2.0.eprj2` 工程文件
 2. 修改后导出新的 Gerber / BOM / 原理图 PDF 更新到对应目录
-
-> ⚠️ **source/ 目录待补充**：`.eprj` 嘉立创EDA专业版工程源文件目前缺失，这是实现"可修改"的关键文件。
 
 ## 📜 许可证
 

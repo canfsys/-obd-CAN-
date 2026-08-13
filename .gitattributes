@@ -21,3 +21,10 @@ Dockerfile text
 *.png binary
 *.jpg binary
 *.ico binary
+
+# 硬件设计文件 (Gerber/钻孔/Excel)
+*.gbr binary
+*.drl binary
+*.xlsx binary
+*.zip binary
+
